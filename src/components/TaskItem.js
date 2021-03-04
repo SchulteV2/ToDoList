@@ -25,10 +25,10 @@ const styles = StyleSheet.create({
         resizeMode: 'contain'
     },
     descColumn: {
-        width: '60%'
+        width: '70%'
     },
     dateColumn: {
-        width: '30%'
+        width: '20%'
     }
 })
 
