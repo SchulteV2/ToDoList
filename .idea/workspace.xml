@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="726220a8-af31-4d29-8271-48b9eac762d2" name="Default Changelist" comment="" />
+    <list default="true" id="726220a8-af31-4d29-8271-48b9eac762d2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/components/TaskItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TaskItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/TaskScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/TaskScreen.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1ljzLXjAbABCdfrSpNXlo7syNgm" />
   <component name="ProjectViewState">
@@ -35,5 +41,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="953" y="0" width="974" height="1047" key="AVDManager/0.0.1920.1040@0.0.1920.1040" timestamp="1608125847947" />
+    <state x="573" y="241" key="run.anything.popup" timestamp="1614903299152">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="573" y="241" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1614903299152" />
   </component>
 </project>

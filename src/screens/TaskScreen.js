@@ -6,6 +6,11 @@ import TaskItem from '../components/TaskItem';
 const TaskScreen = () => {
     
     let [tarefas, setTarefas] = useState([])
+    
+    const removeTask = (id) => {
+        let filteredList = tarefas.filter((task) => task.id != id);
+        setTarefas(filteredList);
+    }
 
     return (
         <View>
@@ -19,7 +24,7 @@ const TaskScreen = () => {
                 keyExtractor={(task) => task.id}
                 data={tarefas}
                 renderItem={(element) => {
-                    return <TaskItem task={element.item} />
+                    return <TaskItem task={element.item} removeTask={ removeTask } />
                 }}
             />
         </View>
@@ -29,13 +34,14 @@ const TaskScreen = () => {
 const newTask = () => {
     let id = Math.random();
     let date = new Date();
-    
+
     let day = date.getDay();
     let month = date.getMonth() + 1;
     let year = date.getFullYear();
 
     return { id: `${id}`, description: `Tarefa #${id}`, date: `${day}/${month}/${year}` }
 }
+
 
 const styles = StyleSheet.create({
     taskList: {

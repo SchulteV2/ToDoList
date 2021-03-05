@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, StyleSheet, View, Image } from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const TaskItem = (props) => {
 
@@ -8,6 +9,11 @@ const TaskItem = (props) => {
             <Image style={styles.imageColumn} source={ require('../../assets/task.png') } />
             <Text style={styles.descColumn}>{props.task.description}</Text>
             <Text style={styles.dateColumn}>{props.task.date}</Text>
+            <TouchableOpacity style={styles.removeColumn} onPress={() => {
+                props.removeTask(props.task.id)
+            }}>
+                <Text style={{color: '#FFFFFF'}}>X</Text>
+            </TouchableOpacity>
         </View>
     )
 };
@@ -25,10 +31,15 @@ const styles = StyleSheet.create({
         resizeMode: 'contain'
     },
     descColumn: {
-        width: '70%'
+        width: '60%'
     },
     dateColumn: {
-        width: '20%'
+        width: '25%'
+    },
+    removeColumn: {
+        // width: '5%',
+        alignItems: 'center',
+        backgroundColor: '#FF0000'
     }
 })
 
