@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { Text, StyleSheet, View, TouchableOpacity } from 'react-native';
+import { Text, StyleSheet, View } from 'react-native';
+import { Button } from 'react-native-paper';
+
 
 const CounterScreen = (props) => {
 
@@ -7,30 +9,21 @@ const CounterScreen = (props) => {
 
     return (
         <View style={styles.container}>
-            <TouchableOpacity style={styles.acrescBtn} onPress={() => { setCounter(counter + 1) }}>
-                <Text>Acrescentar</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity style={styles.dimBtn} onPress={() => { setCounter(counter - 1) }}>
-                <Text>Diminuir</Text>
-            </TouchableOpacity>
-
+            <Button mode="contained" style={styles.btn} onPress={() => { setCounter(counter + 1) }}>
+                Acrescentar
+            </Button>
+            <Button mode="contained" style={styles.btn} onPress={() => { setCounter(counter - 1) }}>
+                Diminuir
+            </Button>
             <Text style={styles.contador}>{counter}</Text>
         </View>
     )
 };
 
 const styles = StyleSheet.create({
-    acrescBtn: {
+    btn: {
         marginTop: 10,
         alignItems: 'center',
-        backgroundColor: '#DDDDDD',
-        padding: 10
-    },
-    dimBtn: {
-        marginTop: 10,
-        alignItems: 'center',
-        backgroundColor: '#DDDDDD',
         padding: 10
     },
     contador: {
