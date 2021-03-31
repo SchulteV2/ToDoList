@@ -1,6 +1,5 @@
 import React from 'react';
 import { Text, StyleSheet, View, Button, TouchableOpacity } from 'react-native';
-import TaskItem from '../components/TaskItem';
 
 const HomeScreen = (props) => {
     return (
