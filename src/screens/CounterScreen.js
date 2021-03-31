@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Text, StyleSheet, View, Button, TouchableOpacity } from 'react-native';
-import TaskItem from '../components/TaskItem';
+import { Text, StyleSheet, View, TouchableOpacity } from 'react-native';
 
 const CounterScreen = (props) => {
 
