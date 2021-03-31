@@ -13,7 +13,7 @@ const TaskItem = (props) => {
                 left={(paperProps) => <FontAwesome {...paperProps} style={styles.icon} name="tasks" size={24} color="black" />}
                 right={(paperProps) => 
                     <TouchableOpacity  onPress={() => {props.removeTask(props.task.id)}}>
-                        <AntDesign {...paperProps} style={styles.icon} name="closesquare" size={24} color="red" />
+                        <AntDesign {...paperProps} style={styles.icon} name="closesquare" size={24} color="#fc5c65" />
                     </TouchableOpacity>
                 }
             />
