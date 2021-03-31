@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Text, StyleSheet, View, Button, FlatList } from 'react-native';
-import { TextInput, TouchableOpacity } from 'react-native-gesture-handler';
+import { StyleSheet, View, FlatList } from 'react-native';
+import { TextInput, Button } from 'react-native-paper';
 import TaskItem from '../components/TaskItem';
 
 const TaskScreen = () => {
@@ -27,17 +27,17 @@ const TaskScreen = () => {
     }
 
     return (
-        <View>
+        <View style={styles.container}>
             <TextInput
+                style={styles.description}
+                mode="outlined"
                 placeholder="Descrição da Tarefa"
                 value={description}
                 onChangeText={ (newValue) => setDescription(newValue) }
             />
-            <TouchableOpacity style={styles.taskBtn} onPress={() => {
-                setTarefas([...tarefas, newTask()])
-            }}>
-                <Text>Cadastrar Tarefa</Text>
-            </TouchableOpacity>
+            <Button mode="contained" style={styles.taskBtn} onPress={() => setTarefas([...tarefas, newTask()])}>
+                Cadastrar Tarefa
+            </Button>
             <FlatList
                 style={styles.taskList}
                 keyExtractor={(task) => task.id}
@@ -53,15 +53,20 @@ const TaskScreen = () => {
 
 
 const styles = StyleSheet.create({
+    container: {
+        width: '96%',
+        marginLeft: '2%',
+        marginRight: '2%',
+    },
+    description: {
+        marginTop: 20
+    },
     taskList: {
         marginTop: 20
     },
     taskBtn: {
         marginTop: 10,
-        alignItems: 'center',
-        backgroundColor: '#DDDDDD',
-        padding: 10
-    }
+    },
 })
 
 export default TaskScreen;
